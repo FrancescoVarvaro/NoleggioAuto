@@ -4,8 +4,9 @@ import java.time.LocalTime;
 
 public class Event implements Comparable<Event>{
 	
+//	'enum' --> SONO CLASSI CHE DEFINISCONO UNA SERIE DI COSTANTI !
 	public enum EventType {
-		NUOVO_CLIENTE,
+		NUOVO_CLIENTE,  
 		AUTO_RESTITUITA
 	}
 	
@@ -56,9 +57,10 @@ public class Event implements Comparable<Event>{
 			return false;
 		return true;
 	}
+	
 	@Override
 	public int compareTo(Event other) {
-		return this.time.compareTo(other.time);
+		return this.time.compareTo(other.time); //verranno prima gli eventi con un tempo inferiore !! SEMPRE COSI' !!
 	}
 	
 	
